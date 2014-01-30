@@ -25,3 +25,42 @@ body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.wrapper { width: 1090px; margin-left: auto; margin-right: auto; }
+
+.clear { *zoom: 1; }
+.clear:after { content: " "; display: table; clear: both; }
+
+.social { font-size: 0; }
+.social li { display: inline-block; vertical-align: middle; margin-left: 24px; }
+.social a { display: block; height: 100%; font: 0/0 a; text-shadow: none; color: transparent; }
+.social .social__mail { background: url('../img/icons-sfcfa8d04c9.png') 0 -177px no-repeat; width: 19px; height: 14px; }
+.social .social__tw { background: url('../img/icons-sfcfa8d04c9.png') 0 -114px no-repeat; width: 20px; height: 17px; }
+
+.phone { float: left; line-height: 1; }
+.phone:before { display: inline-block; vertical-align: middle; margin-right: 5px; background: url('../img/icons-sfcfa8d04c9.png') 0 -141px no-repeat; width: 9px; height: 26px; content: ""; }
+
+.deathstar { background: url('../img/icons-sfcfa8d04c9.png') 0 -63px no-repeat; width: 31px; height: 41px; position: absolute; bottom: 0; right: 220px; }
+
+.topper { *zoom: 1; background: #2a2e3d url("../img/stars_bg.jpg"); color: #bccccc; }
+.topper:after { content: " "; display: table; clear: both; }
+.topper .wrapper { position: relative; height: 48px; }
+.topper .phone { margin-top: 11px; }
+.topper .social { margin-top: 16px; position: relative; z-index: 1; float: right; }
+
+.header { background: #f0f5f5; position: relative; }
+.header:after { position: absolute; top: 100%; left: 0; height: 8px; width: 100%; content: ""; background: url(../img/header_border.png) repeat-x; }
+.header .wrapper { position: relative; height: 90px; line-height: 90px; }
+
+.header__main { float: left; }
+
+.header__slogan { display: inline-block; font-size: 16px; color: #899ba1; line-height: 1.2; }
+
+.logo { display: inline-block; vertical-align: middle; margin-right: 23px; margin-top: -8px; background: url('../img/icons-sfcfa8d04c9.png') 0 0 no-repeat; width: 129px; height: 53px; }
+.logo a { display: block; font: 0/0 a; text-shadow: none; color: transparent; height: 100%; }
+
+.nav { float: right; font-size: 0; }
+.nav li { display: inline-block; vertical-align: top; margin-left: 37px; color: #f55831; font-size: 12px; font-weight: bold; text-transform: uppercase; }
+.nav li:first-child { margin-left: 0; }
+.nav a { color: inherit; line-height: 1.2; text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
