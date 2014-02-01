@@ -34,16 +34,86 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-// 	font-family: "book",arial,sans-serif 
-	
-body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
-	line-height: 1.4
+// 	font-family: "book",arial,sans-serif
 
+body
+	font-size: 12px
+	font-family: Arial, sans-serif
+	line-height: 1.4
+	min-width: 1215px
 
 // common blocks
+.push
+
+.clear
+	+clr
+
+=wrap
+	width: 1090px
+	margin-left: auto
+	margin-right: auto
+.wrapper
+	+wrap
+
+.social
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-left: 24px
+	a
+		display: block
+		height: 100%
+		+hidetext
+	.mail
+		+s(mail)
+	.twitter
+		+s(twitter)
+
+.phone
+	float: left
+	line-height: 1
+	font-weight: normal
+	font-style: normal
+	&:before
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+		+s(phone)
+		content: ""
+
+.logo
+	display: inline-block
+	vertical-align: top
+	margin-top: 15px
+	margin-right: 23px
+	+s(logo)
+	a
+		display: block
+		+hidetext
+		height: 100%
+
+.nav
+	float: right
+	margin-top: 40px
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: top
+		margin-left: 37px
+		line-height: 1
+		color: #f55831
+		font-size: 12px
+		font-weight: bold
+		text-transform: uppercase
+		&:first-child
+			margin-left: 0
+	a
+		color: inherit
+		text-decoration: none
+		&:hover
+			text-decoration: underline

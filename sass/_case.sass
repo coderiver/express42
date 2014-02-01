@@ -1,0 +1,88 @@
+.case
+	margin-bottom: 25px
+
+.case__pager
+	position: fixed
+	top: 50%
+	right: 24px
+.case__pager-item
+	display: block
+	margin-left: auto
+	margin-right: auto
+	margin-top: 20px
+	width: 12px
+	height: 12px
+	+border-radius(50%)
+	background: #27b2c2
+	// border: 2px solid transparent
+	a
+		display: block
+		height: 100%
+	&:hover,
+	&.is-active
+		background: #fff
+		+box-shadow(0 0 0 2px #f55831)
+	&:first-child
+		margin-top: 0
+
+.case__item
+	margin-top: 35px
+	margin-bottom: 60px
+	&.first
+		.case__item-inner
+			&:before
+				+s(case_1)
+				position: absolute
+				top: 140px
+				right: -50px
+				content: ""
+	&.second
+		.case__item-inner
+			&:before
+				+s(case_2)
+				position: absolute
+				top: 75px
+				right: 0px
+				content: ""
+	&.third
+		.case__item-inner
+			&:before
+				+s(case_3)
+				position: absolute
+				top: 75px
+				right: 0px
+				content: ""
+.case__item-inner
+	+wrap
+	position: relative
+.case__content
+	position: relative
+	font-size: 15px
+	color: #2a2e3d
+.case__columns
+	+clr
+.case__first,
+.case__last
+	float: left
+	width: 47%
+.case__last
+	float: right
+	.case__subhead
+		color: #27b2c2
+.case__title
+	font-size: 96px
+	color: #27b2c2
+	font-weight: bold
+	line-height: 1
+	margin-bottom: 60px
+.case__num
+	font-size: 24px
+	color: #bccccc
+	font-weight: bold
+.case__subhead
+	font-size: 20px
+	font-weight: bold
+	text-transform: uppercase
+	color: #f55831
+.case__lead
+	font-weight: bold

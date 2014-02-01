@@ -1,0 +1,29 @@
+.footer
+	position: relative
+	background: #2a2e3d url('../img/stars_bg.jpg')
+	color: #bccccc
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 8px
+		content: ""
+		background: url(../img/border_white.png) repeat-x
+	.phone
+		margin-top: 35px
+	.social
+		position: relative
+		float: right
+		margin-top: 40px
+		z-index: 1
+.footer__in
+	position: relative
+	+wrap
+	height: 92px
+	&:before
+		position: absolute
+		bottom: 0
+		right: 410px
+		content: ""
+		+s(planet)

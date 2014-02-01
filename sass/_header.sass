@@ -1,0 +1,23 @@
+.header
+	position: relative
+	background: #f0f5f5 url(../img/header_bg.jpg) 50% 0 repeat-x
+	margin-bottom: 8px
+	&:after
+		position: absolute
+		top: 100%
+		left: 0
+		height: 8px
+		width: 100%
+		content: ""
+		background: url(../img/border.png) repeat-x
+.header__in
+	+wrap
+	position: relative
+	height: 90px
+.header__slogan
+	display: inline-block
+	vertical-align: top
+	margin-top: 35px
+	font-size: 16px
+	color: #899ba1
+	line-height: 1

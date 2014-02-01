@@ -1,65 +1,15 @@
 // Normally mainpage styles
 
-=wrap
-	width: 1090px
-	margin-left: auto
-	margin-right: auto
-.wrapper
-	+wrap
-
-.clear
-	+clr
-
-
-.social
-	font-size: 0
-	li
-		display: inline-block
-		vertical-align: middle
-		margin-left: 24px
-	a
-		display: block
-		height: 100%
-		+hidetext
-	.social__mail
-		+s(mail)
-	.social__tw
-		+s(twitter)
-
-.phone
-	float: left
-	line-height: 1
-	&:before
-		display: inline-block
-		vertical-align: middle
-		margin-right: 5px
-		+s(phone)
-		content: ""
-
-.deathstar
-	+s(deathstar)
-	position: absolute
-	bottom: 0
-	right: 220px
-
-.topper
-	+clr
-	background: #2a2e3d url('../img/stars_bg.jpg')
-	color: #bccccc
-	.wrapper
-		position: relative
-		height: 48px
-	.phone
-		margin-top: 11px
-	.social
-		margin-top: 16px
-		position: relative
-		z-index: 1
-		float: right
-
-.header
-	background: #f0f5f5
+.company-announce
 	position: relative
+	background: #f0f5f5
+	padding: 60px 0
+	margin-bottom: 8px
+	text-align: center
+.company-announce__txt
+	font-size: 32px
+	font-weight: bold
+	color: #27b2c2
 	&:after
 		position: absolute
 		top: 100%
@@ -67,53 +17,14 @@
 		height: 8px
 		width: 100%
 		content: ""
-		background: url(../img/header_border.png) repeat-x
-	.wrapper
-		position: relative
-		height: 90px
-		line-height: 90px
-.header__main
-	float: left
-	// margin-top: 15px
-.header__slogan
-	display: inline-block
-	//vertical-align: top
-	font-size: 16px
-	color: #899ba1
-	line-height: 1.2
+		background: url(../img/border.png) repeat-x
+.company-announce__button
 
-.logo
-	display: inline-block
-	vertical-align: middle
-	margin-right: 23px
-	margin-top: -8px
-	+s(logo)
-	a
-		display: block
-		+hidetext
-		height: 100%
-.nav
-	float: right
-	font-size: 0
-	li
-		display: inline-block
-		vertical-align: top
-		margin-left: 37px
-		color: #f55831
-		font-size: 12px
-		font-weight: bold
-		text-transform: uppercase
-		&:first-child
-			margin-left: 0
-	a
-		color: inherit
-		line-height: 1.2
-		text-decoration: none
-		&:hover
-			text-decoration: underline
-
-
-
+.feedback
+	margin-top: 55px
+	margin-bottom: 60px
+.feedback__in
+	+wrap
 
 
 
