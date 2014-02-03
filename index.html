@@ -3,45 +3,50 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Express42</title>
+	<title>Express42 - Homepage</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
-<body>
+<body class="landing">
 
 <!-- BEGIN  out-->
 <div class="out">
 	<!-- BEGIN topper -->
 	<div class="topper">
-		<div class="topper__in">
-			<address class="phone">+7 499 918 67 34</address>
-			<ul class="social">
-				<li class="mail"><a href="#777">mail</a></li>
-				<li class="twitter"><a href="#777">twitter</a></li>
-			</ul>
+		<!-- BEGIN bar -->
+		<div class="bar">
+			<div class="bar-i">
+				<address class="phone">+7 499 918 67 34</address>
+				<ul class="social">
+					<li class="mail"><a href="#777">mail</a></li>
+					<li class="twitter"><a href="#777">twitter</a></li>
+				</ul>
+			</div>
 		</div>
+		<!-- END bar -->
+		<!-- BEGIN header -->
+		<header class="header">
+			<div class="header-i">
+				<h1 class="logo"><a href="#777">Express 42</a></h1>
+				<span class="header__slogan">Надёжные решения для сложной инфраструктуры</span>
+				<nav class="nav">
+					<ul>
+						<li class="is-active"><a href="#777">Компания</a></li>
+						<li><a href="#777">Журнал</a></li>
+						<li><a href="#777">Devops</a></li>
+						<li><a href="#777">Обучение</a></li>
+						<li><a href="#777">Сообщество</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- END header -->
 	</div>
 	<!-- END topper -->
-	<!-- BEGIN header -->
-	<header class="header">
-		<div class="header__in">
-			<h1 class="logo"><a href="#777">Express 42</a></h1>
-			<span class="header__slogan">Надёжные решения для сложной инфраструктуры</span>
-			<nav class="nav">
-				<ul>
-					<li><a href="#777">Компания</a></li>
-					<li><a href="#777">Журнал</a></li>
-					<li><a href="#777">Devops</a></li>
-					<li><a href="#777">Обучение</a></li>
-					<li><a href="#777">Сообщество</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<!-- END header -->
 	<!-- BEGIN page -->
 	<div class="page">
 
@@ -49,19 +54,20 @@
 		<div class="case">
 
 			<!-- BEGIN case__pager -->
-			<ul class="case__pager">
-				<li class="case__pager-item is-active"><a href="#777"></a></li>
-				<li class="case__pager-item"><a href="#777"></a></li>
-				<li class="case__pager-item"><a href="#777"></a></li>
+			<ul class="case__pager js-scroll">
+				<li class="is-active"><a href="#first-case"></a></li>
+				<li><a href="#second-case"></a></li>
+				<li><a href="#third-case"></a></li>
 			</ul>
 			<!-- END case__pager -->
-
-			<!-- # first -->
-			<section class="case__item first">
-				<div class="case__item-inner">
+			<div class="case__sections">
+				<!-- # first -->
+				<section id="first-case" class="case__item first">
 					<div class="case__content">
-						<div class="case__num">Задача №1</div>
-						<h2 class="case__title">Непрерывно<br> меняться</h2>
+						<div class="case__heading">
+							<div class="case__num">Задача №1</div>
+							<h2 class="case__title">Непрерывно<br> меняться</h2>
+						</div>
 						<div class="case__columns">
 							<div class="case__first">
 								<h3 class="case__subhead">В чем проблема?</h3>
@@ -77,14 +83,15 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<!-- # second -->
-			<section class="case__item second">
-				<div class="case__item-inner">
+					<a href="#second-case" class="case__next js-next"></a>
+				</section>
+				<!-- # second -->
+				<section id="second-case" class="case__item second">
 					<div class="case__content">
-						<div class="case__num">Задача №2</div>
-						<h2 class="case__title">Оставаться<br> гибкими</h2>
+						<div class="case__heading">
+							<div class="case__num">Задача №2</div>
+							<h2 class="case__title">Оставаться<br> гибкими</h2>
+						</div>
 						<div class="case__columns">
 							<div class="case__first">
 								<h3 class="case__subhead">В чем проблема?</h3>
@@ -99,14 +106,15 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<!-- # third -->
-			<section class="case__item third">
-				<div class="case__item-inner">
+					<a href="#third-case" class="case__next js-next"></a>
+				</section>
+				<!-- # third -->
+				<section id="third-case" class="case__item third">
 					<div class="case__content">
-						<div class="case__num">Задача №3</div>
-						<h2 class="case__title">Обновление<br> без простоев</h2>
+						<div class="case__heading">
+							<div class="case__num">Задача №3</div>
+							<h2 class="case__title">Обновление<br> без простоев</h2>
+						</div>
 						<div class="case__columns">
 							<div class="case__first">
 								<h3 class="case__subhead">В чем проблема?</h3>
@@ -122,22 +130,48 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</div>
 		<!-- END case -->
 		<!-- BEGIN company-announce -->
 		<div class="company-announce">
-			<div class="company-announce__txt">Подробнее об услугах, технологиях<br> и наших клиентах</div>
-			<div class="company-announce__button">
-				<a href="#777" class="btn">Компания</a>
+			<div class="company-announce-i">
+				<div class="company-announce__txt">Подробнее об услугах, технологиях<br> и наших клиентах</div>
+				<div class="company-announce__button">
+					<a href="#777" class="btn">Компания</a>
+				</div>
 			</div>
 		</div>
 		<!-- END company-announce -->
 		<!-- BEGIN feedback -->
 		<div class="feedback">
-			<div class="feedback__in">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, distinctio, ab, animi autem nobis dolore doloribus natus debitis pariatur velit est nulla sit tenetur aut quidem dolores mollitia accusantium nisi?
+			<div class="feedback-i">
+				<h2 class="feedback__title">Для связи</h2>
+				<div class="feedback__form">
+					<fieldset>
+						<div class="feedback__row">
+							<label for="inputName">Ваше имя</label>
+							<input type="text" id="inputName" value="">
+						</div>
+						<div class="feedback__row">
+							<div class="feedback__field">
+								<label for="inputEmail">E-mail</label>
+								<input type="email" id="inputEmail" placeholder="">
+							</div>
+							<div class="feedback__field">
+								<label for="inputTel">или телефон</label>
+								<input type="tel" id="inputTel" placeholder="+7 (   )    -  -">
+								<span class="feedback__help">Вы можете просто оставить свой телефон и мы вам перезвоним и все обо всем расскажем! ;-)</span>
+							</div>
+						</div>
+						<div class="feedback__row">
+							<label>Опишите ваш проект</label>
+							<textarea name="" id="" rows="1"></textarea>
+						</div>
+						<button type="submit" class="btn">Отправить</button>
+					</fieldset>
+				</div>
 			</div>
 		</div>
 		<!-- END feedback -->
@@ -149,7 +183,7 @@
 
 <!-- BEGIN footer -->
 <footer class="footer">
-	<div class="footer__in">
+	<div class="footer-i">
 		<address class="phone">+7 499 918 67 34</address>
 		<ul class="social">
 			<li class="mail"><a href="#777">mail</a></li>

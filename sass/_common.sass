@@ -40,14 +40,39 @@
 // =book
 // 	font-family: "book",arial,sans-serif
 
+html, body
+	height: 100%
+
 body
 	font-size: 12px
 	font-family: Arial, sans-serif
 	line-height: 1.4
+	color: $dark
 	min-width: 1215px
+	&.landing
+		.topper
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			z-index: 1
+		.page
+			padding-top: 0
+			margin-bottom: 0
 
 // common blocks
-.push
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -92px
+
+.footer, .push
+	height: 92px
+
+.page
+	padding-top: 35px
+	margin-bottom: 60px
 
 .clear
 	+clr
@@ -58,6 +83,18 @@ body
 	margin-right: auto
 .wrapper
 	+wrap
+
+.narrow
+	width: 650px
+	margin-left: auto
+	margin-right: auto
+
+.title
+	text-align: center
+	text-transform: uppercase
+	color: $orange
+	font-weight: normal
+	margin-bottom: 2em
 
 .social
 	font-size: 0
@@ -106,14 +143,47 @@ body
 		vertical-align: top
 		margin-left: 37px
 		line-height: 1
-		color: #f55831
+		color: $orange
 		font-size: 12px
 		font-weight: bold
 		text-transform: uppercase
 		&:first-child
 			margin-left: 0
+		&.is-active, &:hover
+			color: $grey
 	a
 		color: inherit
 		text-decoration: none
 		&:hover
-			text-decoration: underline
+			text-decoration: none
+
+input, textarea
+	border: 2px solid $grey
+	width: 100%
+	+box
+	line-height: 18px
+	font-size: 15px
+	padding: 9px 15px
+	+placeholder-color($grey)
+	font-weight: bold
+	&:focus
+		+placeholder-color(transparent)
+		border: 2px solid $dark
+textarea
+	resize: vertical
+	// resize: none
+	margin: 0
+	//height: 40px
+	line-height: 16px
+	padding: 10px 15px
+
+
+
+
+
+
+
+
+
+
+

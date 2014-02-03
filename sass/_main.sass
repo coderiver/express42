@@ -1,15 +1,18 @@
 // Normally mainpage styles
 
+// company-announce
 .company-announce
 	position: relative
-	background: #f0f5f5
+	background: $grey_light
 	padding: 60px 0
-	margin-bottom: 8px
+	margin-bottom: -8px
 	text-align: center
+.company-announce-i
+	+wrap
 .company-announce__txt
 	font-size: 32px
 	font-weight: bold
-	color: #27b2c2
+	color: $blue
 	&:after
 		position: absolute
 		top: 100%
@@ -19,14 +22,59 @@
 		content: ""
 		background: url(../img/border.png) repeat-x
 .company-announce__button
+	margin-top: 1.6em
 
+// feedback
 .feedback
-	margin-top: 55px
+	padding-top: 55px
 	margin-bottom: 60px
-.feedback__in
+	border-top: 1px solid $grey_light
+.feedback-i
 	+wrap
-
-
+.feedback__title
+	float: left
+	color: $grey
+	font-size: 24px
+	font-weight: bold
+.feedback__form
+	width: 515px
+	margin-left: auto
+	margin-right: auto
+	.btn
+		display: block
+		margin-left: auto
+		margin-right: auto
+	label
+		display: block
+		color: $grey
+		font-size: 15px
+		margin-bottom: 0.2em
+.feedback__row
+	+clr
+	margin-bottom: 30px
+.feedback__field
+	position: relative
+	float: right
+	width: 47.5%
+	&:first-child
+		float: left
+.feedback__help
+	position: absolute
+	top: 0
+	left: 100%
+	width: 270px
+	margin-left: 15px
+	+box
+	padding-left: 50px
+	color: $blue
+	font-size: 15px
+	display: block
+	&:before
+		position: absolute
+		top: 30px
+		left: 0
+		+s(form-arr)
+		content: ""
 
 
 

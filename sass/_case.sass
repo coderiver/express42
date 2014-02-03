@@ -1,35 +1,41 @@
 .case
-	margin-bottom: 25px
-
+	// margin-top: 150px
+	margin-bottom: 20px
+	overflow: hidden
 .case__pager
 	position: fixed
 	top: 50%
+	margin-top: -38px
 	right: 24px
-.case__pager-item
-	display: block
-	margin-left: auto
-	margin-right: auto
-	margin-top: 20px
-	width: 12px
-	height: 12px
-	+border-radius(50%)
-	background: #27b2c2
-	// border: 2px solid transparent
-	a
+	z-index: 1
+	display: none
+	&.is-visible
 		display: block
-		height: 100%
-	&:hover,
-	&.is-active
-		background: #fff
-		+box-shadow(0 0 0 2px #f55831)
-	&:first-child
-		margin-top: 0
-
+	li
+		display: block
+		margin-left: auto
+		margin-right: auto
+		margin-top: 20px
+		width: 12px
+		height: 12px
+		+border-radius(50%)
+		background: $blue
+		a
+			display: block
+			height: 100%
+		&.is-active
+			background: #fff
+			background: transparent
+			+box-shadow(0 0 0 2px $orange)
+		&:first-child
+			margin-top: 0
+.case__sections
 .case__item
-	margin-top: 35px
-	margin-bottom: 60px
+	position: relative
+	min-height: 660px !important
+	+transition(all .2s linear)
 	&.first
-		.case__item-inner
+		.case__content
 			&:before
 				+s(case_1)
 				position: absolute
@@ -37,7 +43,7 @@
 				right: -50px
 				content: ""
 	&.second
-		.case__item-inner
+		.case__content
 			&:before
 				+s(case_2)
 				position: absolute
@@ -45,22 +51,58 @@
 				right: 0px
 				content: ""
 	&.third
-		.case__item-inner
+		.case__content
 			&:before
 				+s(case_3)
 				position: absolute
 				top: 75px
 				right: 0px
 				content: ""
-.case__item-inner
-	+wrap
-	position: relative
+	&.is-animate
+		.case__next
+			+opacity(1)
+		.case__heading
+			+transform(translateY(0))
+			+opacity(1)
+		.case__content
+			&:before
+				+transform(translateX(0))
+				+opacity(1)
+		.case__columns
+			+opacity(1)
 .case__content
 	position: relative
+	padding-top: 35px
+	margin-bottom: 30px
+	+wrap
 	font-size: 15px
-	color: #2a2e3d
+	color: $dark
+	&:before
+		+transform(translateX(400px))
+		+opacity(0)
+		+transition(all .3s ease-in-out)
+.case__next
+	+s(next)
+	cursor: pointer
+	position: absolute
+	bottom: 20px
+	left: 50%
+	margin-left: -13px
+	+opacity(0)
+	+transition(all .1s ease-in-out)
+	//+transition-delay(.1s)
+.case__heading
+	position: relative
+	+transform(translateY(-400px))
+	+opacity(0)
+	+transition(all .3s ease-in-out)
 .case__columns
 	+clr
+	+opacity(0)
+	+transition(all .4s ease-in-out)
+	+transition-delay(.2s)
+	p
+		margin-bottom: 1em
 .case__first,
 .case__last
 	float: left
@@ -68,21 +110,22 @@
 .case__last
 	float: right
 	.case__subhead
-		color: #27b2c2
+		color: $blue
 .case__title
 	font-size: 96px
-	color: #27b2c2
+	color: $blue
 	font-weight: bold
 	line-height: 1
 	margin-bottom: 60px
 .case__num
 	font-size: 24px
-	color: #bccccc
+	color: $grey
 	font-weight: bold
 .case__subhead
 	font-size: 20px
 	font-weight: bold
 	text-transform: uppercase
-	color: #f55831
+	color: $orange
+	margin-bottom: 1em
 .case__lead
 	font-weight: bold

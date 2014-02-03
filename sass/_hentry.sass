@@ -1,0 +1,30 @@
+.hentries
+.hentry
+	&:after
+		position: relative
+		display: block
+		margin: 50px auto
+		+s(wave)
+		content: ""
+	// &:first-child
+	// 	&:before
+	// 		content: none
+	h2, h3
+		color: $blue
+		margin-bottom: 1em
+	p
+		margin-bottom: 1em
+	ul
+		li
+			position: relative
+			padding-left: 15px
+			margin-bottom: 0.2em
+			&:before
+				position: absolute
+				left: 0
+				top: 5px
+				width: 6px
+				height: 6px
+				background: $blue
+				+border-radius(50%)
+				content: ""
