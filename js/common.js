@@ -9,7 +9,7 @@ $(document).ready(function() {
 	});
 
 	function scrollSidenav(){
-		$('.company__item').each(function(){
+		$('.company__section').each(function(){
 			var pos = $(this).offset().top;
 			var id = $(this).attr('id');
 			if( $(window).scrollTop() >= (pos - 20)){
@@ -23,7 +23,7 @@ $(document).ready(function() {
 	function fixedSidenav() {
 		var top = ($('.company').offset().top - 20);
 		var bottom = ($('.company').offset().top - 20);
-		var last = ($('.company__item:last').offset().top + 70);
+		var last = ($('.company__section:last').offset().top + 70);
 		// var bottom = ($('.company__item:last').offset().top + 170);
 
 		if($(window).scrollTop() > top){
@@ -59,10 +59,10 @@ $(document).ready(function() {
 		var el_height = $('body').height();
 		var topper_height = $('.topper').height();
 
-		$(".case__item").css("height", el_height);
-		$(".case__item:first").css('padding-top',  topper_height);
-		$(".case__item:first").css("height", el_height - topper_height);
-		$(".case__item:last").css("height", "auto");
+		$(".case__item").css("height", el_height - topper_height);
+		//$(".case__item:first").css('padding-top',  topper_height);
+		//$(".case__item:first").css("height", el_height - topper_height);
+		//$(".case__item:last").css("height", "auto");
 	} caseHeight();
 
 	function scrollPager(){

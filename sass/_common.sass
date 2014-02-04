@@ -45,17 +45,18 @@ html, body
 
 body
 	font-size: 12px
-	font-family: Arial, sans-serif
+	// font-family: Arial, sans-serif
+	+pn_r
 	line-height: 1.4
 	color: $dark
 	min-width: 1215px
 	&.landing
-		.topper
-			position: absolute
+		.topper.is-fixed
+			position: fixed
 			top: 0
 			left: 0
 			right: 0
-			z-index: 1
+			z-index: 100
 		.page
 			padding-top: 0
 			margin-bottom: 0
@@ -67,6 +68,7 @@ a
 		text-decoration: underline
 
 input, textarea
+	+pn_b
 	border: 2px solid $grey
 	width: 100%
 	+box
@@ -74,7 +76,6 @@ input, textarea
 	font-size: 15px
 	padding: 9px 15px
 	+placeholder-color($grey)
-	font-weight: bold
 	&:focus
 		+placeholder-color(transparent)
 		border: 2px solid $dark
@@ -102,6 +103,9 @@ textarea
 	height: 100%
 	margin: 0 auto -92px
 
+.topper
+	position: relative
+
 .footer, .push
 	height: 92px
 
@@ -113,12 +117,14 @@ textarea
 	margin-left: auto
 	margin-right: auto
 
-.title
+=h
 	text-align: center
 	text-transform: uppercase
 	color: $orange
 	font-weight: normal
 	margin-bottom: 2em
+.main-title
+	+h
 
 .social
 	font-size: 0
@@ -171,9 +177,9 @@ textarea
 		vertical-align: top
 		margin-left: 37px
 		line-height: 1
-		color: $orange
+		+pn_b
 		font-size: 12px
-		font-weight: bold
+		color: $orange
 		text-transform: uppercase
 		&:first-child
 			margin-left: 0

@@ -1,6 +1,5 @@
 .case
-	// margin-top: 150px
-	margin-bottom: 20px
+	//margin-bottom: 20px
 	overflow: hidden
 .case__pager
 	position: fixed
@@ -31,43 +30,31 @@
 			margin-top: 0
 .case__sections
 .case__item
+	padding-top: 150px
 	position: relative
 	min-height: 660px !important
 	+transition(all .2s linear)
 	&.first
-		.case__content
-			&:before
-				+s(case_1)
-				position: absolute
-				top: 140px
-				right: -50px
-				content: ""
+		.case-bg
+			+s(case_1)
+			right: -50px
+			bottom: 10px
 	&.second
-		.case__content
-			&:before
-				+s(case_2)
-				position: absolute
-				top: 75px
-				right: 0px
-				content: ""
+		.case-bg
+			+s(case_2)
 	&.third
-		.case__content
-			&:before
-				+s(case_3)
-				position: absolute
-				top: 75px
-				right: 0px
-				content: ""
+		.case-bg
+			+s(case_3)
+			bottom: 20px
 	&.is-animate
 		.case__next
 			+opacity(1)
-		.case__heading
+		.case__header-i
 			+transform(translateY(0))
 			+opacity(1)
-		.case__content
-			&:before
-				+transform(translateX(0))
-				+opacity(1)
+		.case-bg
+			+transform(translateX(0))
+			+opacity(1)
 		.case__columns
 			+opacity(1)
 .case__content
@@ -77,30 +64,48 @@
 	+wrap
 	font-size: 15px
 	color: $dark
-	&:before
-		+transform(translateX(400px))
-		+opacity(0)
-		+transition(all .3s ease-in-out)
 .case__next
-	+s(next)
+	// +s(next)
 	cursor: pointer
 	position: absolute
-	bottom: 20px
-	left: 50%
-	margin-left: -13px
+	bottom: 0
+	left: 0
+	right: 0
+	height: 60px
+	// margin-left: -13px
 	+opacity(0)
 	+transition(all .1s ease-in-out)
 	//+transition-delay(.1s)
-.case__heading
+	z-index: 1
+	&:before
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -13px
+		margin-top: -8px
+		+s(next)
+		content: ""
+.case__header
 	position: relative
-	+transform(translateY(-400px))
+.case__header-i
+	position: relative
+	+transform(translateY(-300px))
 	+opacity(0)
-	+transition(all .3s ease-in-out)
+	+transition(all .5s ease-in-out)
+.case-bg
+	position: absolute
+	bottom: 0
+	right: 0
+	content: ""
+	+transform(translateX(400px))
+	+opacity(0)
+	+transition(all .4s ease-in-out)
+	+transition-delay(.3s)
 .case__columns
 	+clr
 	+opacity(0)
-	+transition(all .4s ease-in-out)
-	+transition-delay(.2s)
+	+transition(all .3s ease-in-out)
+	+transition-delay(.6s)
 	p
 		margin-bottom: 1em
 .case__first,
@@ -112,20 +117,20 @@
 	.case__subhead
 		color: $blue
 .case__title
+	margin-bottom: 60px
+	font-weight: bold
 	font-size: 96px
 	color: $blue
-	font-weight: bold
 	line-height: 1
-	margin-bottom: 60px
 .case__num
 	font-size: 24px
 	color: $grey
 	font-weight: bold
 .case__subhead
-	font-size: 20px
+	margin-bottom: 1em
 	font-weight: bold
+	font-size: 20px
 	text-transform: uppercase
 	color: $orange
-	margin-bottom: 1em
 .case__lead
 	font-weight: bold

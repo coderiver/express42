@@ -6,9 +6,6 @@
 		margin: 50px auto
 		+s(wave)
 		content: ""
-	// &:first-child
-	// 	&:before
-	// 		content: none
 	h2, h3
 		color: $blue
 		margin-bottom: 1em
@@ -32,18 +29,27 @@
 		img
 			display: block
 			max-width: 100%
+.hentry_wave-hidden
+	&:after
+		content: none
 .hentry__tags
 .hentry__content
 	position: relative
-.hentry__meta
+p.hentry__info
 	position: absolute
+	top: 0
 	right: 100%
 	width: 150px
 	margin-right: 15px
+	margin-bottom: 0
 .hentry__socials
+	img
+		display: block
 .hentry__date
 	text-transform: uppercase
 	color: $blue
 	font-weight: bold
 .hentry__author
+	display: block
 	font-weight: bold
+
