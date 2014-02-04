@@ -85,6 +85,16 @@ textarea
 	line-height: 16px
 	padding: 10px 15px
 
+.clear
+	+clr
+
+=wrap
+	width: 1090px
+	margin-left: auto
+	margin-right: auto
+.wrapper
+	+wrap
+
 // common blocks
 .out
 	min-height: 100%
@@ -98,18 +108,7 @@ textarea
 .page
 	padding-top: 35px
 	margin-bottom: 60px
-
-.clear
-	+clr
-
-=wrap
-	width: 1090px
-	margin-left: auto
-	margin-right: auto
-.wrapper
-	+wrap
-
-.narrow
+.page_narrow
 	width: 650px
 	margin-left: auto
 	margin-right: auto
@@ -127,6 +126,10 @@ textarea
 		display: inline-block
 		vertical-align: middle
 		margin-left: 24px
+		+opacity(.8)
+		+transition(opacity .3s linear)
+		&:hover
+			+opacity(1)
 	a
 		display: block
 		height: 100%
