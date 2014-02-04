@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$(".menu a").click(function (){
+	$(".sidenav a").click(function (){
 		var page = $(this).attr("href");
 			$('html, body').animate({
 				scrollTop: $(page).offset().top - 15
@@ -8,32 +8,32 @@ $(document).ready(function() {
 		return false;
 	});
 
-	function scrollMenu(){
+	function scrollSidenav(){
 		$('.company__item').each(function(){
 			var pos = $(this).offset().top;
 			var id = $(this).attr('id');
 			if( $(window).scrollTop() >= (pos - 20)){
-				$('.menu li').removeClass('is-active');
+				$('.sidenav li').removeClass('is-active');
 				$('[href = #'+id+']').parent().addClass('is-active');
 			}
 		});
 	}
 
 
-	function fixedMenu() {
+	function fixedSidenav() {
 		var top = ($('.company').offset().top - 20);
 		var bottom = ($('.company').offset().top - 20);
 		var last = ($('.company__item:last').offset().top + 70);
 		// var bottom = ($('.company__item:last').offset().top + 170);
 
 		if($(window).scrollTop() > top){
-				$(".menu").addClass('is-fixed');
+				$(".sidenav").addClass('is-fixed');
 		}
 		if($(window).scrollTop() < bottom){
-			$(".menu").removeClass('is-fixed');
+			$(".sidenav").removeClass('is-fixed');
 		}
 		if($(window).scrollTop() > last){
-			$(".menu").removeClass('is-fixed');
+			$(".sidenav").removeClass('is-fixed');
 		}
 
 	}
@@ -118,9 +118,9 @@ $(document).ready(function() {
 	});
 
 	$(window).scroll(function() {
-		if ($('.menu').length) {
-			fixedMenu();
-			scrollMenu();
+		if ($('.sidenav').length) {
+			fixedSidenav();
+			scrollSidenav();
 		}
 		if ($('.case').length) {
 			scrollPager();

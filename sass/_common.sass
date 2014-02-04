@@ -66,6 +66,25 @@ a
 	&:hover
 		text-decoration: underline
 
+input, textarea
+	border: 2px solid $grey
+	width: 100%
+	+box
+	line-height: 18px
+	font-size: 15px
+	padding: 9px 15px
+	+placeholder-color($grey)
+	font-weight: bold
+	&:focus
+		+placeholder-color(transparent)
+		border: 2px solid $dark
+
+textarea
+	resize: vertical
+	margin: 0
+	line-height: 16px
+	padding: 10px 15px
+
 // common blocks
 .out
 	min-height: 100%
@@ -163,26 +182,27 @@ a
 		&:hover
 			text-decoration: none
 
-input, textarea
-	border: 2px solid $grey
-	width: 100%
-	+box
-	line-height: 18px
-	font-size: 15px
-	padding: 9px 15px
-	+placeholder-color($grey)
-	font-weight: bold
-	&:focus
-		+placeholder-color(transparent)
-		border: 2px solid $dark
-textarea
-	resize: vertical
-	// resize: none
-	margin: 0
-	//height: 40px
-	line-height: 16px
-	padding: 10px 15px
-
+.sidenav
+	&.is-fixed
+		position: fixed
+		width: 29.4%
+		max-width: 320px
+		top: 20px
+	li
+		&.is-active
+			a
+				border: 1px solid #d6e0e0
+				color: $grey
+	a
+		display: block
+		padding: 16px 20px
+		font-size: 18px
+		line-height: 18px
+		border: 1px solid transparent
+		color: $blue
+		text-decoration: none
+		&:hover
+			text-decoration: none
 
 
 
