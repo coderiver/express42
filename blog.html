@@ -1,0 +1,121 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Express42 - Blog</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- BEGIN topper -->
+	<div class="topper">
+		<!-- BEGIN bar -->
+		<div class="bar">
+			<div class="bar-i">
+				<address class="phone">+7 499 918 67 34</address>
+				<ul class="social">
+					<li class="mail"><a href="#777">mail</a></li>
+					<li class="twitter"><a href="#777">twitter</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- END bar -->
+		<!-- BEGIN header -->
+		<header class="header">
+			<div class="header-i">
+				<h1 class="logo"><a href="#777">Express 42</a></h1>
+				<span class="header__slogan">Надёжные решения для сложной инфраструктуры</span>
+				<nav class="nav">
+					<ul>
+						<li class="is-active"><a href="#777">Компания</a></li>
+						<li><a href="#777">Журнал</a></li>
+						<li><a href="#777">Devops</a></li>
+						<li><a href="#777">Обучение</a></li>
+						<li><a href="#777">Сообщество</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- END header -->
+	</div>
+	<!-- END topper -->
+	<!-- BEGIN page -->
+	<div class="page">
+		<div class="narrow">
+			<h2 class="title">Блог</h2>
+			<article class="hentry">
+				<h2>Теория и практика адаптивного дизайна: практика</h2>
+				<div class="hentry__content">
+					<div class="hentry__meta">
+						<time class="hentry__date" datetime="2014-09-21T10:28:00Z" itemprop="datePublished" pubdate="">21 сентября 2014</time>
+						<p class="hentry__author">Андрей Колесниченков</p>
+					</div>
+					<p>На сайте ADVmarket.ru мы разместили теоретическую часть статьи об адаптивном дизайне, но специфика площадки не позволила нам рассказать о технических подробностях. Поэтому, публикуем эту часть в нашем блоге.</p>
+
+					<p>Теперь обсудим практические вопросы <a href="#">адаптивной вёрстки</a>, а именно: с какой стороны подходить к разметке страниц.</p>
+
+					<p>Чтобы страница отобразилась в нужном варианте, верстальщику необходимо узнать, на каком устройстве отображается сайт в данный момент времени. Для этого есть два метода, активный и пассивный.</p>
+
+					<h3>Активный vs. пассивный методы</h3>
+					<p>Активный метод подразумевает, что разработчик с помощью клиентского или серверного сниффинга сам отслеживает, с какого устройства зашел пользователь и “подсовывает” ему подходящую вёрстку. Такой прием активно использовался до широкого распространения CSS3 и за примерами далеко ходить не надо: это главная страница нашего сайта.</p>
+					<figure>
+						<img src="img/pic1.jpg" alt="img">
+					</figure>
+					<p>С внедрением поддержки CSS3 и распространением современных браузеров, стал все чаще применяться пассивный метод. Он подразумевает, что устройство/браузер само определяет для страницы свои параметры и применяет к себе подходящие стили. В этом подходе есть свои преимущества и недостатки по сравнению с активным, но поскольку он гораздо удобнее в разработке и поддержке, сконцентрируемся на нём.</p>
+					<p class="hentry__tags">
+						<a href="#">дизайн</a>, <a href="#">метод</a>, <a href="#">программирование</a>, <a href="#">процесс</a>
+					</p>
+				</div>
+				<div class="hentry__socials">
+					<img src="img/soc-share.png" alt="socials">
+				</div>
+			</article>
+
+			<article class="hentry">
+				<h2>Скролл в бесконечность</h2>
+				<div class="hentry__content">
+					<div class="hentry__meta">
+						<time class="hentry__date" datetime="2014-09-12T10:26:00Z" itemprop="datePublished" pubdate="">12 сентября 2014</time>
+						<p class="hentry__author">Андрей Колесниченков</p>
+					</div>
+					<p>После изобретения бесконечного скроллинга появилась проблема потери контекста. При нажатии на любую из ссылок ты терял то <a href="#">место в ленте</a>, которое смотрел. Никто не хотел потерять место, до которого доскроллил в ленте, это сдерживало потребление. Фейсбуку пришлось придумывать всякие механизмы, что бы пользователь не терял контекст. Например открывать фотографии поверх ленты — если закроешь фотографию, то окажешься там же где и был.</p>
+					<p class="hentry__tags">
+						<a href="#">метод</a>, <a href="#">процесс</a>
+					</p>
+				</div>
+				<div class="hentry__socials">
+					<img src="img/soc-share.png" alt="socials">
+				</div>
+			</article>
+			<!-- BEGIN paginator -->
+			<div class="paginator">paginator</div>
+			<!-- END paginator -->
+		</div>
+	</div>
+	<!-- END page -->
+	<div class="push"></div>
+</div>
+<!-- END out-->
+
+<!-- BEGIN footer -->
+<footer class="footer">
+	<div class="footer-i">
+		<address class="phone">+7 499 918 67 34</address>
+		<ul class="social">
+			<li class="mail"><a href="#777">mail</a></li>
+			<li class="twitter"><a href="#777">twitter</a></li>
+		</ul>
+	</div>
+</footer>
+<!-- END footer -->
+
+</body>
+</html>
