@@ -8,43 +8,43 @@
             prefix: '@@',
             suffix: ''
           },
-          src: 'dev/*.html',
-          dest: 'build/'
+          src: 'src/*.html',
+          dest: 'production/'
         }
       },
       clean: {
-        files: ["build/_*.html", "build/*.js"]
+        files: ["production/_*.html", "production/*.js"]
       },
       copy: {
         main: {
           files: [
             {
               expand: true,
-              cwd: "dev/img/",
+              cwd: "src/img/",
               src: ["**"],
-              dest: "build/img"
+              dest: "production/img"
             }, {
               expand: true,
-              cwd: "dev/fonts/",
+              cwd: "src/fonts/",
               src: ["**"],
-              dest: "build/fonts"
+              dest: "production/fonts"
             }, {
               expand: true,
-              cwd: "dev/js",
+              cwd: "src/js",
               src: ["**"],
-              dest: "build/js"
+              dest: "production/js"
             }, {
               expand: true,
-              cwd: "dev/img/svg/",
+              cwd: "src/img/svg/",
               src: "*",
-              dest: "build/img/svg/",
+              dest: "production/img/svg/",
               filter: "isFile"
             }
           ]
         }
       },
       watch: {
-        files: ["dev/*.html", "dev/js/*.js", "dev/img/icons*.png"],
+        files: ["src/*.html", "src/js/*.js", "src/img/icons*.png"],
         tasks: ["includereplace", "copy", "clean"]
       }
     });
