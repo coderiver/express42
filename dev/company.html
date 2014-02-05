@@ -1,0 +1,63 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Express42 - Company</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	@@include('_headerscripts.html')
+</head>
+<body>
+
+<!-- BEGIN  out-->
+<div class="out">
+	@@include('_header.html', {"state": ""})
+	<!-- BEGIN page -->
+	<div class="page">
+		<div class="company layout">
+			<aside class="company__sidebar l-sidebar">
+				@@include('_sidenav.html')
+			</aside>
+			<div class="company__main l-main">
+				<section id="about" class="company__section">
+					<h2 class="h1">О нас</h2>
+					<p><strong>Экспресс 42</strong> — компания, которая занимается эксплуатацией средних и больших интернет-проектов. Наши специалисты работали над такими проектами, как Одноклассники, Групон, Skype и облачный хостинг Скалакси.</p>
+				</section>
+				<section id="tech" class="company__section">
+					<h2 class="h1">Технологии</h2>
+					<p><strong>Методология devops позволит успевать за приходом новых пользователей, меняться для пользователей ежедневно.</strong></p>
+					<p>Devops — это особая культура взаимоотношений в команде it-специалистов, автоматизация изменений, мониторинг и измерение параметров всех компонентов системы, распространение знание о системе между членами команды.</p>
+					<p>Мы внедряем технические инструменты и обучаем ваших специалистов, чтобы вы имели возможность изменять ваш сервис сколь угодно часто, без ошибок и простоев, для достижения максимальной конверсии.</p>
+				</section>
+				<section id="services" class="company__section">
+					<h2 class="h1">Услуги</h2>
+					<h3 class="h3">Аудит</h3>
+					<p>Комплексный аудит вашего проекта позволит вам в кратчайшие сроки узнать об основных технических рисках, которые вредят вашему бизнесу или могут серьезно навредить ему в будущем. Наш опыт работы в крупнейших проектах поможет выявить большинство проблем вашего проекта и найти для каждой из них приемлемое решение.</p>
+					<h3 class="h3">Скорая помощь</h3>
+					<p>Ваш сайт лежит, а вы не знаете, что делать? Ваш проект не отвечает, а вы теряете клиентов и деньги? Мы поднимаем сайты в кратчайшие сроки и берем деньги только после того, как ваш ресурс поднялся. Цена услуги — 5 тысяч рублей в час.</p>
+				</section>
+				<section id="clients" class="company__section">
+					<h2 class="h1">Клиенты</h2>
+					<ul class="company__list">
+						<li><a href="#"><img src="img/client1.png" alt="client"></a></li>
+						<li><a href="#"><img src="img/client2.png" alt="client"></a></li>
+						<li><a href="#"><img src="img/client3.png" alt="client"></a></li>
+						<li><a href="#"><img src="img/client4.png" alt="client"></a></li>
+						<li><a href="#"><img src="img/client5.png" alt="client"></a></li>
+						<li><a href="#"><img src="img/client6.png" alt="client"></a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		@@include('_feedback.html')
+	</div>
+	<!-- END page -->
+	<div class="push"></div>
+</div>
+<!-- END out-->
+@@include('_footer.html')
+</body>
+</html>
+
+

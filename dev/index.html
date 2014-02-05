@@ -1,0 +1,27 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Express42 - Homepage</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	@@include('_headerscripts.html')
+</head>
+<body class="landing">
+<!-- BEGIN  out-->
+<div class="out">
+	@@include('_header.html', {"state": "is-fixed"})
+	<!-- BEGIN page -->
+	<div class="page">
+		@@include('_cases.html')
+		@@include('_announce.html')
+		@@include('_feedback.html')
+	</div>
+	<!-- END page -->
+	<div class="push"></div>
+</div>
+<!-- END out-->
+@@include('_footer.html')
+</body>
+</html>

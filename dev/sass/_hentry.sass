@@ -1,0 +1,63 @@
+.entries
+// .entries_blog
+// 	.hentry__content
+// 		font-size: 18px
+
+.hentry
+	position: relative
+	font-size: 18px
+	margin-top: 60px
+	// margin-bottom: 100px
+	padding-bottom: 50px
+	&:after
+		position: relative
+		display: block
+		margin: 50px auto 0
+		+s(wave)
+		content: ""
+	ul
+		li
+			position: relative
+			padding-left: 15px
+			margin-bottom: 0.2em
+			&:before
+				position: absolute
+				left: 0
+				top: 5px
+				width: 6px
+				height: 6px
+				background: $blue
+				+border-radius(50%)
+				content: ""
+	figure
+		img
+			display: block
+			max-width: 100%
+	p
+		margin-bottom: 1em
+.hentry__title
+	position: absolute
+	top: -60px
+.hentry_wave
+	&:after
+		content: none
+.hentry__tags
+p.hentry__info
+	position: absolute
+	top: 0
+	right: 100%
+	width: 150px
+	margin-right: 15px
+	margin-bottom: 0
+	font-size: 12px
+.hentry__socials
+	img
+		display: block
+.hentry__date
+	text-transform: uppercase
+	color: $blue
+	font-weight: bold
+.hentry__author
+	display: block
+	font-weight: bold
+
