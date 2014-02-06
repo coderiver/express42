@@ -47,6 +47,7 @@ body
 	font-size: 12px
 	// font-family: Arial, sans-serif
 	+pn_r
+	+font-smoothing
 	line-height: 1.4
 	color: $dark
 	min-width: 1215px
@@ -68,7 +69,8 @@ a
 		text-decoration: underline
 
 input, textarea
-	+pn_b
+	+pn_r
+	font-weight: bold
 	border: 2px solid $grey
 	width: 100%
 	+box
@@ -127,7 +129,7 @@ textarea
 	text-transform: uppercase
 	color: $orange
 	font-weight: bold
-	padding-bottom: 2em
+	margin-bottom: 2em
 	font-size: 24px
 .h2
 	font-size: 25px
@@ -160,6 +162,7 @@ textarea
 
 .phone
 	float: left
+	font-size: 16px
 	line-height: 1
 	font-weight: normal
 	font-style: normal
@@ -190,7 +193,7 @@ textarea
 		vertical-align: top
 		margin-left: 37px
 		line-height: 1
-		+pn_b
+		font-weight: bold
 		font-size: 12px
 		color: $orange
 		text-transform: uppercase

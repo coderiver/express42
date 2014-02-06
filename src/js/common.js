@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$(".sidenav a").click(function (){
+	$(".js-sidenav a").click(function (){
 		var page = $(this).attr("href");
 			$('html, body').animate({
 				scrollTop: $(page).offset().top - 15
@@ -13,7 +13,7 @@ $(document).ready(function() {
 			var pos = $(this).offset().top;
 			var id = $(this).attr('id');
 			if( $(window).scrollTop() >= (pos - 20)){
-				$('.sidenav li').removeClass('is-active');
+				$('.js-sidenav li').removeClass('is-active');
 				$('[href = #'+id+']').parent().addClass('is-active');
 			}
 		});
@@ -27,13 +27,13 @@ $(document).ready(function() {
 		// var bottom = ($('.company__item:last').offset().top + 170);
 
 		if($(window).scrollTop() > top){
-				$(".sidenav").addClass('is-fixed');
+				$(".js-sidenav").addClass('is-fixed');
 		}
 		if($(window).scrollTop() < bottom){
-			$(".sidenav").removeClass('is-fixed');
+			$(".js-sidenav").removeClass('is-fixed');
 		}
 		if($(window).scrollTop() > last){
-			$(".sidenav").removeClass('is-fixed');
+			$(".js-sidenav").removeClass('is-fixed');
 		}
 
 	}
@@ -118,7 +118,7 @@ $(document).ready(function() {
 	});
 
 	$(window).scroll(function() {
-		if ($('.sidenav').length) {
+		if ($('.js-sidenav').length) {
 			fixedSidenav();
 			scrollSidenav();
 		}
