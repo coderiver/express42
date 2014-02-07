@@ -2,22 +2,22 @@
 <!--[if lte IE 8]><html class="lteie8"><![endif]-->
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<title>Express42 - Company</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	@@include('_headerscripts.html')
+	include "headerscripts"
 </head>
 <body>
 
 <!-- BEGIN  out-->
 <div class="out">
-	@@include('_header.html', {"state": ""})
+	include "header"
 	<!-- BEGIN page -->
 	<div class="page">
 		<div class="company layout">
 			<aside class="company__sidebar l-sidebar">
-				@@include('_sidenav.html')
+				include "sidenav"
 			</aside>
 			<div class="company__main l-main">
 				<section id="about" class="company__section">
@@ -50,13 +50,13 @@
 				</section>
 			</div>
 		</div>
-		@@include('_feedback.html')
+		include "feedback"
 	</div>
 	<!-- END page -->
 	<div class="push"></div>
 </div>
 <!-- END out-->
-@@include('_footer.html')
+include "footer"
 </body>
 </html>
 

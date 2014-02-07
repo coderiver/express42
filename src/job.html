@@ -2,17 +2,17 @@
 <!--[if lte IE 8]><html class="lteie8"><![endif]-->
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<title>Express42 - Job</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	@@include('_headerscripts.html')
+	include "headerscripts"
 </head>
 <body>
 
 <!-- BEGIN  out-->
 <div class="out">
-	@@include('_header.html', {"state": ""})
+	include "header"
 	<!-- BEGIN page -->
 	<div class="page page_narrow">
 		<h2 class="h1">Работа в нашей компании</h2>
@@ -50,7 +50,7 @@
 	<div class="push"></div>
 </div>
 <!-- END out-->
-@@include('_footer.html')
+include "footer"
 
 </body>
 </html>

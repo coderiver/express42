@@ -2,18 +2,31 @@
 (function() {
   module.exports = function(grunt) {
     grunt.initConfig({
-      includereplace: {
-        dist: {
+      // includereplace: {
+      //   dist: {
+      //     options: {
+      //       prefix: '@@',
+      //       suffix: ''
+      //     },
+      //     src: 'src/*.html',
+      //     dest: 'production/'
+      //   }
+      // },
+      includes: {
+        files: {
+          src: ["src/*.html"],
+          dest: "production",
+          flatten: true,
+          cwd: ".",
           options: {
-            prefix: '@@',
-            suffix: ''
-          },
-          src: 'src/*.html',
-          dest: 'production/'
+            silent: true,
+            filenamePrefix: "includes/",
+            filenameSuffix: ".html"
+          }
         }
       },
       clean: {
-        files: ["production/_*.html", "production/*.js"]
+        files: ["production/_*.html", "production/*.js", "production/img/"]
       },
       copy: {
         main: {
@@ -44,13 +57,13 @@
         }
       },
       watch: {
-        files: ["src/*.html", "src/js/*.js", "src/img/icons*.png"],
-        tasks: ["includereplace", "copy", "clean"]
+        files: ["src/*.html", "src/js/*.js", "src/includes/*.html", "src/img/icons*.png"],
+        tasks: ["clean", "includes", "copy"]
       }
     });
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
     grunt.registerTask("default", ["watch"]);
-    return grunt.registerTask("a", ["clean", "includereplace", "copy"]);
+    return grunt.registerTask("a", ["clean", "includes", "copy"]);
   };
 
 }).call(this);

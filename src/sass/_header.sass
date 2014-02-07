@@ -1,3 +1,29 @@
+.topper
+	position: relative
+	z-index: 100
+
+.bar
+	+clr
+	background: $dark url('../img/stars_bg.jpg')
+	color: $grey
+	.phone
+		margin-top: 11px
+	.social
+		position: relative
+		float: right
+		margin-top: 16px
+		z-index: 1
+.bar-i
+	+wrap
+	position: relative
+	height: 48px
+	&:before
+		position: absolute
+		bottom: 0
+		right: 220px
+		content: ""
+		+s(deathstar)
+
 .header
 	position: relative
 	background: $grey_light url(../img/header_bg.jpg) 50% 0 repeat-x
@@ -10,8 +36,8 @@
 		width: 100%
 		content: ""
 		background: url(../img/border.png) repeat-x
-	.nav
-		width: 44%
+	//.nav
+		//width: 44%
 .header-i
 	+wrap
 	position: relative
