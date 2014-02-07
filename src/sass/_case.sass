@@ -11,7 +11,7 @@
 	margin-top: -38px
 	right: 24px
 	z-index: 100
-	span
+	li
 		display: block
 		margin-left: auto
 		margin-right: auto
@@ -22,13 +22,13 @@
 		background: $blue
 		+hidetext
 		cursor: pointer
-		&.cycle-pager-active
+		&.is-active
 			background: #fff
 			background: transparent
 			+box-shadow(0 0 0 2px $orange)
 		&:first-child
 			margin-top: 0
-.case__holder
+.case__slider
 	+wrap
 .case__item
 	//padding-top: 150px
@@ -47,9 +47,7 @@
 		.case-bg
 			+s(case_3)
 			bottom: 20px
-	&.cycle-slide-active
-		.case__next
-			+opacity(1)
+	&.is-active
 		.case__header-i
 			+transform(translateY(0))
 			+opacity(1)
@@ -58,6 +56,9 @@
 			+opacity(1)
 		.case__columns
 			+opacity(1)
+			+transition(all .6s ease-in)
+			+transform(translateY(0))
+			+transition-delay(.4s)
 .case__content
 	position: relative
 	padding-top: 35px
@@ -73,10 +74,6 @@
 	left: 0
 	right: 0
 	height: 60px
-	// margin-left: -13px
-	+opacity(1)
-	+transition(all .1s ease-in-out)
-	//+transition-delay(.1s)
 	z-index: 1000
 	&:before
 		position: absolute
@@ -86,29 +83,30 @@
 		margin-top: -8px
 		+s(next)
 		content: ""
-	&.disabled
+	&.is-disabled
 		display: none
 .case__header
 	position: relative
 .case__header-i
 	position: relative
-	+transform(translateY(-300px))
+	+transform(translateY(-700px))
 	+opacity(0)
-	+transition(all .5s ease-in-out)
+	+transition(all .8s ease)
 .case-bg
 	position: absolute
 	bottom: 0
 	right: 0
 	content: ""
-	+transform(translateX(400px))
+	+transform(translateX(700px))
 	+opacity(0)
-	+transition(all .4s ease-in-out)
-	+transition-delay(.3s)
+	+transition(all .8s ease)
+	+transition-delay(0s)
 .case__columns
 	+clr
 	+opacity(0)
-	+transition(all .3s ease-in-out)
-	+transition-delay(.6s)
+	+transition(all .3s ease-in)
+	//+transform(translateY(1000px))
+	+transition-delay(.1s)
 	p
 		margin-bottom: 1em
 .case__first,

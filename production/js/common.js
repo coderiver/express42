@@ -1,5 +1,23 @@
 $(document).ready(function() {
 
+	// $('.cycle-slideshow').cycle({
+	// 		timeout: 0,
+	// 		// fx: fadeout,
+	// 		log: false,
+	// 		pager: ".case__pager",
+	// 		slides: ".case__item",
+	// 		next: ".case__next",
+
+	// 		// pager-template: "<li></li>",
+	// 		// allow-wrap: false,
+	// 		// slide-class: "case__item",
+	// 		// slide-active-class: "is-active",
+	// 		pager-active-class: "is-active"
+	// 		// disabled-class: "is-disabled"
+	// });
+
+	$('.case__slider').cycle();
+
 	$(".js-sidenav a").click(function (){
 		var page = $(this).attr("href");
 			$('html, body').animate({
