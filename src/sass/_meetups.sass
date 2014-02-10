@@ -3,6 +3,13 @@
 	top: 15px
 	right: 0
 	width: 325px
+	+r(breaklarge)
+		position: relative
+		top: auto
+		right: auto
+		margin-bottom: 20px
+	+r(small)
+		width: 100%
 .meetups__item
 	border-top: 2px solid $grey
 	+clr
@@ -28,6 +35,8 @@
 	vertical-align: top
 	max-width: 68%
 	+text-overflow
+	+r(breaksmall)
+		max-width: 40%
 .meetups__date
 	float: right
 	display: inline-block

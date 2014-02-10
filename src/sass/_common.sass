@@ -50,7 +50,7 @@ body
 	// +font-smoothing
 	line-height: 1.4
 	color: $dark
-	min-width: 1215px
+	// min-width: 1215px
 	&.landing
 		.topper.is-fixed
 			position: fixed
@@ -92,7 +92,8 @@ textarea
 	+clr
 
 =wrap
-	width: 1090px
+	max-width: 1070px
+	padding: 0 10px
 	margin-left: auto
 	margin-right: auto
 .wrapper
@@ -115,9 +116,13 @@ textarea
 	padding-top: 35px
 	margin-bottom: 60px
 .page_narrow
-	width: 650px
+	max-width: 650px
+	//padding: 0 10px
 	margin-left: auto
 	margin-right: auto
+	+r(breaksmall)
+		padding-left: 10px
+		padding-right: 10px
 
 // =h
 
@@ -166,6 +171,8 @@ textarea
 	line-height: 1
 	font-weight: normal
 	font-style: normal
+	position: relative
+	z-index: 1
 	&:before
 		display: inline-block
 		vertical-align: middle
@@ -184,10 +191,40 @@ textarea
 		+hidetext
 		height: 100%
 
+
+.navbar
+	+s(navbar)
+	float: right
+	margin-top: 38px
+	display: none
+	+r(landscape)
+		display: block
 .nav
 	float: right
 	margin-top: 38px
 	font-size: 0
+	display: block
+	+r(landscape)
+		background: $grey_light
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		//width: 100%
+		display: none
+		float: none
+		margin-top: -10px
+		padding: 0 10px 20px
+		z-index: 105
+		&:after
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			height: 8px
+			width: 100%
+			content: ""
+			background: url(../img/border.png) repeat-x
 	li
 		display: inline-block
 		vertical-align: top
@@ -201,20 +238,38 @@ textarea
 			margin-left: 0
 		&.is-active, &:hover
 			color: $grey
+		+r(landscape)
+			display: block
+			text-align: center
+			margin-left: 0
+			// padding: 5px
+			margin-bottom: 5px
+			border: 1px solid $grey
 	a
+		display: block
 		color: inherit
 		text-decoration: none
+		+r(landscape)
+			padding: 10px 5px
 		&:hover
 			text-decoration: none
 
 .sidenav
+	+r(breaksmall)
+		max-width: 320px
 	&.is-fixed
 		position: fixed
 		width: 29.4%
 		max-width: 320px
 		top: 20px
+		+r(breaksmall)
+			position: relative
+			// width: 100%
+			// max-width: 100%
+			top: auto
 	li
-		&.is-active
+		margin-top: -1px
+		&:hover, &.is-active
 			a
 				border: 1px solid #d6e0e0
 				color: $grey

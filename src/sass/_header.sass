@@ -1,6 +1,6 @@
 .topper
 	position: relative
-	z-index: 100
+	z-index: 1000
 
 .bar
 	+clr
@@ -23,6 +23,8 @@
 		right: 220px
 		content: ""
 		+s(deathstar)
+		+r(breaksmall)
+			right: 130px
 
 .header
 	position: relative
@@ -42,6 +44,9 @@
 	+wrap
 	position: relative
 	height: 90px
+	+r(landscape)
+		height: auto
+		min-height: 90px
 .header__slogan
 	display: inline-block
 	vertical-align: top
@@ -49,3 +54,5 @@
 	font-size: 16px
 	color: #899ba1
 	line-height: 1
+	+r(breaksmall)
+		display: none

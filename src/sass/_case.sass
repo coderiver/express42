@@ -5,12 +5,16 @@
 	//margin-bottom: 20px
 	position: relative
 	overflow: hidden
+	+r(breaksmall)
+		margin-top: 20px
 .case__pager
 	position: absolute
 	top: 50%
 	margin-top: -38px
 	right: 24px
 	z-index: 100
+	+r(landscape)
+		display: none
 	li
 		display: block
 		margin-left: auto
@@ -30,11 +34,16 @@
 			margin-top: 0
 .case__slider
 	+wrap
+	+r(small)
+		height: auto !important
 .case__item
 	//padding-top: 150px
 	position: relative
 	min-height: 700px !important
 	+transition(all .2s linear)
+	+r(breaklarge)
+		min-height: auto !important
+		height: auto !important
 	&.first
 		.case-bg
 			+s(case_1)
@@ -47,6 +56,19 @@
 		.case-bg
 			+s(case_3)
 			bottom: 20px
+	// &.is-static
+	// 	visibility: visible
+	// 	.case__header-i
+	// 		+transform(translateY(0))
+	// 		opacity: 1 !important
+	// 	.case-bg
+	// 		+transform(translateX(0))
+	// 		opacity: 1 !important
+	// 	.case__columns
+	// 		opacity: 1 !important
+	// 		+transition(all .6s ease-in)
+	// 		+transform(translateY(0))
+	// 		+transition-delay(.4s)
 	&.is-active
 		z-index: 120 !important
 		.case__header-i
@@ -76,6 +98,8 @@
 	right: 0
 	height: 60px
 	z-index: 1000
+	+r(breaksmall)
+		display: none
 	&:before
 		position: absolute
 		top: 50%
@@ -93,6 +117,7 @@
 	+transform(translateY(-700px))
 	+opacity(0)
 	+transition(all .8s ease)
+	z-index: 1
 .case-bg
 	position: absolute
 	bottom: 0
@@ -102,6 +127,8 @@
 	+opacity(0)
 	+transition(all .8s ease)
 	+transition-delay(0s)
+	+r(breaklarge)
+		display: none
 .case__columns
 	+clr
 	+opacity(0)
@@ -114,6 +141,9 @@
 .case__last
 	float: left
 	width: 47%
+	+r(breaksmall)
+		float: none
+		width: 100%
 .case__last
 	float: right
 	.case__subhead
@@ -124,6 +154,9 @@
 	font-size: 96px
 	color: $blue
 	line-height: 1
+	+r(breaksmall)
+		font-size: 50px
+		margin-bottom: .5em
 .case__num
 	font-size: 24px
 	color: $grey

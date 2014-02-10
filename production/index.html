@@ -31,6 +31,7 @@
 		<!-- BEGIN header -->
 		<header class="header">
 			<div class="header-i">
+				<button class="navbar"></button>
 				<nav class="nav">
 					<ul>
 						<li class="is-active"><a href="#777">Компания</a></li>
@@ -51,12 +52,11 @@
 	<div class="page">
 		<!-- BEGIN cases -->
 		<div class="cases">
-			<ul class="case__pager"></ul>
-			<div class="case__slider"
+			<div class="case__slider js-caseslider"
 				data-cycle-fx="none"
 				data-cycle-manual-speed="800"
 				data-cycle-hide-non-active="false"
-
+				data-cycle-auto-height="container"
 				data-cycle-timeout="0"
 				data-cycle-log="false"
 				data-cycle-pager=".case__pager"
@@ -74,8 +74,6 @@
 					<div class="case__content">
 						<div class="case__header">
 							<div class="case__header-i">
-								<span class="case__num">Задача №1</span>
-								<h2 class="case__title">Непрерывно<br> меняться</h2>
 								<!-- BEGIN meetups -->
 								<ul class="meetups">
 									<li class="meetups__item">
@@ -86,6 +84,8 @@
 									</li>
 								</ul>
 								<!-- END meetups -->
+								<span class="case__num">Задача №1</span>
+								<h2 class="case__title">Непрерывно<br> меняться</h2>
 							</div>
 							<i class="case-bg"></i>
 						</div>
@@ -160,6 +160,7 @@
 				<div class="case__next"></div>
 
 			</div>
+			<ul class="case__pager"></ul>
 		</div>
 		<!-- END cases -->
 		<!-- BEGIN company-announce -->

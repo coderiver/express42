@@ -47,6 +47,7 @@
 .hentry__socials
 	img
 		display: block
+		max-width: 100%
 p.hentry__info
 	position: absolute
 	top: 0.4em
@@ -56,11 +57,20 @@ p.hentry__info
 	margin-bottom: 0
 	font-size: 12px
 	font-weight: bold
+	+r(landscape)
+		position: relative
+		top: auto
+		right: auto
+		width: auto
+		margin-right: 0
+		margin-bottom: 1em
 .hentry__date
 	text-transform: uppercase
 	color: $blue
 	margin-bottom: 1em
 	display: block
+	+r(landscape)
+		margin-bottom: auto
 .hentry__author
 	display: block
 	color: $dark
