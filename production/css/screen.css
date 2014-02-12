@@ -306,7 +306,8 @@ p.hentry__info { position: absolute; top: 0.4em; right: 100%; width: 150px; marg
 .company__section p { margin-bottom: 1em; }
 .company__section .h3 { margin-bottom: 1em; }
 
-.company__list { margin-left: -0.6%; }
+.company__list { margin-left: -0.6%; margin-bottom: 1em; *zoom: 1; }
+.company__list:after { content: " "; display: table; clear: both; }
 .company__list li { float: left; width: 24.4%; height: 128px; line-height: 128px; background: #f0f5f5; margin-left: 0.6%; margin-bottom: 0.6%; text-align: center; }
 @media only screen and (max-width: 670px) { .company__list li { width: 49.4%; } }
 .company__list li a { display: block; height: 100%; text-decoration: none; }
