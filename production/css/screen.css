@@ -310,5 +310,15 @@ p.hentry__info { position: absolute; top: 0.4em; right: 100%; width: 150px; marg
 .company__list:after { content: " "; display: table; clear: both; }
 .company__list li { float: left; width: 24.4%; height: 128px; line-height: 128px; background: #f0f5f5; margin-left: 0.6%; margin-bottom: 0.6%; text-align: center; }
 @media only screen and (max-width: 670px) { .company__list li { width: 49.4%; } }
+@media only screen and (max-width: 400px) { .company__list li { width: 100%; } }
 .company__list li a { display: block; height: 100%; text-decoration: none; }
 .company__list li img { display: inline-block; vertical-align: middle; max-width: 100%; }
+
+.company__image { display: block; margin-left: auto; margin-right: auto; max-height: 95px; margin-bottom: 1em; }
+
+.company__more { display: block; text-align: center; }
+
+.company__columns { text-align: center; font-size: 0; }
+
+.company__col { display: inline-block; vertical-align: top; width: 50%; font-size: 16px; padding: 0 10px; margin-bottom: 1em; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+@media only screen and (max-width: 670px) { .company__col { width: 100%; } }
