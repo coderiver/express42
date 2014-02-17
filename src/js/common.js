@@ -26,35 +26,48 @@ $(document).ready(function() {
 		}
 		else{
 			$('.case__slider').addClass('js-caseslider');
-			$('.js-caseslider').cycle();
+			$('.js-caseslider').cycle({
+				fx: "none",
+				manualSpeed: 800,
+				timeout: 0,
+				log: false,
+				allowWrap: false,
+				autoHeight: "container",
+				hideNonActive: false,
+				slideActiveClass: "is-active",
+				pagerActiveClass: "is-active",
+				disabledClass: "is-disabled",
+				slideClass: "case__item",
+				pager: ".case__pager",
+				slides: ".case__item",
+				next: ".case__next",
+				pagerTemplate: "<li></li>"
+			});
 		}
 	}
 	detectSlider();
+
 
 	var body = $('body');
 	var cases = $('.js-caseslider');
 
 	cases.bind('mousewheel', function(event, delta) {
-
-
 		// alert('ololo');
 		if (body.hasClass('is-running')) {
 			//alert('i am runnig dont talk to me');
 		} else {
 			body.addClass('is-running');
 			if (delta < 0) {
-				// setTimeout('$(".js-caseslider").cycle("next", function( event, opts ) {
-				// 	body.removeClass("is-running");
-				// })', 100);
 
-				// $(".js-caseslider").on("next", function( event, opts ) {
-				// 	body.removeClass("is-running");
-				// });
 				$('.js-caseslider').cycle('next');
 				setTimeout('$("body").removeClass("is-running")', 1500);
+
 			}
 		}
-		return false;
+		if ($(window).width() > 640) {
+			return false;
+		}
+
 	});
 
 
@@ -62,8 +75,6 @@ $(document).ready(function() {
 	$('.navbar').on('click', function() {
 		$('.nav').slideToggle('fast');
 	});
-
-
 
 	function scrollSidenav(){
 		$('.company__section').each(function(){
@@ -109,6 +120,11 @@ $(document).ready(function() {
 	});
 
 	$(window).resize(function() {
+		detectSlider();
+	});
+
+
+	$(window).load(function() {
 		detectSlider();
 	});
 
