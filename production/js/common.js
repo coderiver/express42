@@ -51,23 +51,58 @@ $(document).ready(function() {
 	var body = $('body');
 	var cases = $('.js-caseslider');
 
-	cases.bind('mousewheel', function(event, delta) {
+	body.bind('mousewheel', function(event, delta) {
 		// alert('ololo');
 		if (body.hasClass('is-running')) {
 			//alert('i am runnig dont talk to me');
 		} else {
 			body.addClass('is-running');
 			if (delta < 0) {
-
-				$('.js-caseslider').cycle('next');
-				setTimeout('$("body").removeClass("is-running")', 1500);
-
+				if($('.js-caseslider').data("cycle.opts").currSlide==2){
+					console.log('gofoter');
+					$('html, body').animate({
+				        scrollTop: $(".company-announce").offset().top
+				    }, 800);
+				    $('body').addClass('bottom');
+				    setTimeout('$("body").removeClass("is-running")', 1500);
+				}
+				else{
+					$('.js-caseslider').cycle('next');
+					setTimeout('$("body").removeClass("is-running")', 1500);
+				}
+			}
+			if (delta > 0) {
+				if($('body').hasClass('bottom')){
+					console.log('fromt bottom to top');
+					$('html, body').animate({
+				        scrollTop: $(".topper").offset().top
+				    }, 800);
+				    $('body').removeClass('bottom');
+				    setTimeout('$("body").removeClass("is-running")', 1500);
+				}
+				else{
+					$('.js-caseslider').cycle('prev');
+					setTimeout('$("body").removeClass("is-running")', 1500);
+				}
+				// if($('.js-caseslider').data("cycle.opts").currSlide==0){
+				// 	console.log('TOOOPest');
+				//     setTimeout('$("body").removeClass("is-running")', 1500);
+				// }
+				// else{
+				// 	$('.js-caseslider').cycle('prev');
+				// 	setTimeout('$("body").removeClass("is-running")', 1500);
+				// }
 			}
 		}
 		if ($(window).width() > 640) {
 			return false;
 		}
 
+	});
+
+	$( '#mySlideshow' ).on( 'cycle-after', function( event, opts ) {
+	    // your event handler code here
+	    // argument opts is the slideshow's option hash
 	});
 
 
