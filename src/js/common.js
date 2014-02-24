@@ -66,6 +66,7 @@ $(document).ready(function() {
 						}, 800);
 						$('body').addClass('bottom');
 						setTimeout('$("body").removeClass("is-running")', 1500);
+						$('body').unbind('mousewheel');
 					}
 					else{
 						$('.js-caseslider').cycle('next');
@@ -95,6 +96,11 @@ $(document).ready(function() {
 					// }
 				}
 			}
+			// if (delta > 0) {
+			// 	if($('body').hasClass('is-unbind')){
+			// 		$('body').unbind("mousewheel");
+			// 	}
+			// }
 			if ($(window).width() > 640) {
 				return false;
 			}
