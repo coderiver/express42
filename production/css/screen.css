@@ -173,6 +173,7 @@ textarea { resize: vertical; margin: 0; line-height: 16px; padding: 10px 15px; }
 .case__item.is-active .case__columns { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; -webkit-transition: all 0.6s ease-in; -moz-transition: all 0.6s ease-in; -o-transition: all 0.6s ease-in; transition: all 0.6s ease-in; -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); -webkit-transition-delay: 0.4s; -moz-transition-delay: 0.4s; -o-transition-delay: 0.4s; transition-delay: 0.4s; }
 
 .case__content { position: relative; padding-top: 35px; margin-bottom: 30px; max-width: 1070px; padding: 0 10px; margin-left: auto; margin-right: auto; font-size: 15px; color: #2a2e3d; }
+@media (max-width: 1280px) and (max-height: 800px) { .case__content { font-size: 12px; } }
 
 .case__next { cursor: pointer; position: absolute; bottom: 0; left: 0; right: 0; height: 60px; z-index: 1000; }
 @media only screen and (max-width: 670px) { .case__next { display: none; } }
@@ -196,19 +197,20 @@ textarea { resize: vertical; margin: 0; line-height: 16px; padding: 10px 15px; }
 .case__last { float: right; }
 .case__last .case__subhead { color: #27b2c2; }
 
-.case__title { margin-bottom: 60px; font-weight: bold; font-size: 96px; color: #27b2c2; line-height: 1; }
+.case__title { margin-bottom: 60px; font-weight: bold; font-size: 96px; color: red; line-height: 1; }
 @media only screen and (max-width: 670px) { .case__title { font-size: 40px; margin-bottom: 0.5em; } }
+@media (max-width: 1280px) and (max-height: 800px) { .case__title { font-size: 44px; } }
 
 .case__num { display: block; font-size: 24px; color: #bccccc; font-weight: bold; margin-bottom: 0.5em; }
 
 .case__subhead { margin-bottom: 1em; font-weight: bold; font-size: 20px; text-transform: uppercase; color: #f55831; }
 
 .meetups { position: absolute; top: 15px; right: 0; width: 325px; }
-@media only screen and (max-width: 940px) { .meetups { position: relative; top: auto; right: auto; margin-bottom: 20px; } }
 @media only screen and (max-width: 640px) { .meetups { width: 100%; } }
 
 .meetups__item { border-top: 2px solid #bccccc; *zoom: 1; font-size: 15px; font-weight: bold; color: #2a2e3d; }
 .meetups__item:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 940px) { .meetups__item { font-size: 12px; } }
 .meetups__item:first-child { border: none; }
 .meetups__item a { display: block; padding: 14px 0 14px 5px; color: #2a2e3d; text-decoration: none; line-height: 1.2; }
 .meetups__item a:hover .meetups__target { text-decoration: underline; }

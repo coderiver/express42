@@ -3,11 +3,11 @@
 	top: 15px
 	right: 0
 	width: 325px
-	+r(breaklarge)
-		position: relative
-		top: auto
-		right: auto
-		margin-bottom: 20px
+	// +r(breaklarge)
+	// 	position: relative
+	// 	top: auto
+	// 	right: auto
+	// 	margin-bottom: 20px
 	+r(small)
 		width: 100%
 .meetups__item
@@ -16,6 +16,8 @@
 	font-size: 15px
 	font-weight: bold
 	color: $dark
+	+r(breaklarge)
+		font-size: 12px
 	&:first-child
 		border: none
 	a
